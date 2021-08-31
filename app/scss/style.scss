@@ -1,0 +1,609 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.supheader {
+    height: 43px;
+    background-color: #000;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__login {
+        position: relative;
+        &::before {
+            content: url('../images/admin.svg');
+            position: absolute;
+            left: -25px;
+            top: -5px;
+        }
+    }
+    &__login-link {
+        display: block;
+        font-size: 11px;
+        line-height: 13px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    &__compare {
+        margin-left: 49px;
+        position: relative;
+    }
+    &__compare-btn {
+        display: block;
+    }
+    &__compare-count {
+        color: #fff;
+        font-size: 10px;
+        line-height: 11px;
+        text-align: center;
+        display: block;
+        position: absolute;
+        background-color: #F37A1F;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        top: -5px;
+        right: -15px;
+    }
+    &__search {
+        margin-left: 45px;
+    }
+}
+
+.header {
+    &__menu {
+        height: 68px;
+    }
+    &__menu-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__menu-item {
+        height: 68px;
+        padding: 23px 37px;
+        text-align: center;
+        border-right: 1px solid #B1B1B1;
+    
+        &_logo {
+            background-image: url('../images/logo.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 154px;
+            height: 67px;
+        }
+    }
+    &__menu-link {
+        position: relative;
+        color: #000;
+        font-size: 17px;
+        line-height: 22px;
+        text-transform: uppercase;
+        font-family: 'STIHLCONTRAFACEDISPLAYTITLING';
+        font-weight: normal;
+        transition: .4s;
+    }
+    &__menu-link:hover {
+        color:#F37A1F;
+    }
+    &__menu-link_plus {
+        margin-right: 20px;
+    }
+
+    &__menu-link_plus::after {
+        content: url('../images/plus.svg');
+        position: absolute;
+        top: 0;
+        right: -25px;
+    }
+}
+.pagetitle {
+    font-size: 32px;
+    line-height: 43px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'STIHLCONTRAFACEDISPLAYTITLING';
+}
+.pagetitle-subscribe {
+    max-width: 305px;
+}
+
+.line {
+    display: block;
+    margin-top: 23px;
+    width: 52px;
+    height: 7px;
+    background-color: #fff;
+}
+.main {
+    &__header {
+        padding-top: 53px;
+        background-image: url('../images/header.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 353px;
+        &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        }
+    }
+    &__header-nav {
+        position: relative;
+        margin-left: 12px;
+        color: #fff;
+        &::before {
+            content: url('../images/arrow.svg');
+            position: absolute;
+            top: -6px;
+            left: -15px;
+        }
+    }
+    &__header-link {
+        display: block;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    &__header-title {
+        margin-top: 68px;
+    }
+
+    &__header-options {
+        margin-top: 83px;
+        display: flex;
+    }
+    &__header-item {
+        width: 118px;
+        height: 58px;
+        background-color: #fff;
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+        font-size: 17px;
+        line-height: 64px;
+        text-transform: uppercase;
+        transition: all .8s;
+        &:hover {
+            background-color: #F37A1F;
+            color: #fff;
+        }
+    }
+    &-info__compare {
+        margin-top: 76px;
+        display: flex;
+        align-items: center;
+    }
+    &-info__compare-btn {
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 160px;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            content: url('../images/compareblack.svg');
+            position: absolute;
+            top: 2px;
+            left: -38px;
+        }
+    }
+    &-info__watch-btn {
+        position: relative;
+        margin-left: 245px;
+        font-size: 17px;
+        line-height: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    &-info__watch-btn::after {
+        content: url('../images/video.svg');
+        position: absolute;
+        top: 20px;
+        right: -70px;
+        z-index: 20;
+    }
+    &-info__wrapper {
+        display: flex;
+        margin-top: 20px;
+    }
+    &-info__slider-wrapper {
+        display: flex;
+    }
+    &-info__slider-nav {
+        display: flex;
+        flex-direction: column;
+        width: 120px;
+        order: 1;
+        height: 395px;
+    }
+    &-info__slider {
+        width: 468px;
+        order: 2;
+
+    }
+    &-info__slide {
+        width: 468px;
+        height: 373px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &-info__slide-nav {
+        max-width: 117px;
+        height: 91px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    
+    &-info__specification {
+        display: flex;
+        align-items: center;
+        margin-left: 97px;
+        max-width: 377px;
+    }
+    &-info__specification-item {
+        max-width: 172px;
+    }
+    &-info__specification-title {
+        font-size: 17px;
+        line-height: 18px;
+        margin-top: 0;
+    }
+    &-info__specification-value {
+        font-size: 15px;
+        line-height: 16px;
+        font-family: 'STIHLCONTRAFACETEXT-BOLD';
+    }
+    &-info__right {
+        margin-left: 152px;
+        display: flex;
+        flex-direction: column;  
+    }
+    &-info__right-price {
+        display: flex;
+        align-items: center;
+    }
+    &-info__right-price_old {
+        display: block;
+        position: relative;
+        margin-top: 0;
+        font-size: 22px;
+        line-height: 30px;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 110%;
+            background-color: #F37A1F;
+            top: 50%;
+            left: -4px;
+        }
+    }
+    &-info__right-price_new {
+        font-size: 28px;
+        margin-top: 0;
+        line-height: 37px;
+        color: #F37A1F;
+        text-decoration: none;
+        margin-left: 33px;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &-info__right-counter_minus {
+        cursor: pointer;
+        width: 30px;
+        float: left;
+        text-align: center;
+        font-weight: bold;
+    }
+    &-info__right-counter_plus {
+        cursor: pointer;
+        width: 30px;
+        float: right;
+        text-align: center;
+        font-weight: bold;
+    }
+    &-info__right-counter_number {
+        width: 47px;
+        height: 100%;
+        text-align:center;
+        border:none;
+        border-left: 2px solid;
+        border-right: 2px solid;
+        font-weight: bold;
+    }
+    &-info__right-counter {
+        width: 111px;
+        height: 33px;
+        border: 2px solid;
+        font-size: 15px;
+        margin-top: 36px;
+    }
+
+    &-info__right-bin {
+        margin-top: 29px;
+        width: 186px;
+        height: 40px;
+        background-color: #F37A1F;
+        color: #fff;
+        font-size: 16px;
+        line-height: 21px;
+        border: none;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &-info__right-btn {
+        margin-top: 24px;
+        width: 186px;
+        height: 40px;
+        background-color: transparent;
+        color: #000;
+        font-size: 16px;
+        text-align: center;
+        line-height: 21px;
+        border: 2px solid #000;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &-info__descr {
+        margin-top: 70px;
+    }
+    &-info__descr-title {
+        font-size: 32px;
+        line-height: 43px;
+        text-transform: uppercase;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &-info__descr-text {
+        font-size: 17px;
+        line-height: 31px;
+        max-width: 1078px;
+    }
+
+    &-cards {
+        padding: 72px 0 113px 0;
+    }
+
+    &-cards__title {
+        font-size: 32px;
+        line-height: 43px;
+        text-transform: uppercase;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+
+    &-cards__wrapper {
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-cards__card-img {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 199px;
+        height: 199px;
+        img {
+            display: block;
+            margin: auto;
+            object-fit: contain;
+        }
+    }
+    &-cards__card {
+        padding-bottom: 25px;
+        height: 100%;
+        max-width: 256px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid #dddddd;
+    }
+    &-cards__card-info {
+        height: 120px;
+    }
+    &-cards__card-title {
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &-cards__card-descr {
+        margin-top: 8px;
+        font-size: 15px;
+        line-height: 16px;
+    }
+
+    &-cards__card-price {
+        margin-top: 41px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &-cards__card-sum {
+        font-size: 18px;
+        line-height: 24px;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &-cards__card-cart {
+        width: 32px;
+        height: 32px;
+        background-color: #F37A1F;
+        border: none;
+        border-radius: 100%;
+    }
+    &-subscribe {
+        padding: 37px 0;
+        height: 160px;
+        background-image: url('../images/subscribebg.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    &-subscribe__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-subscribe__form {
+        position: relative;
+    }
+    &-subscribe__form::after {
+        content: url('../images/arrow-sb.svg');
+        position: absolute;
+        top: 11px;
+        right: 20px;
+    }
+    &-subscribe__input {
+        width: 427px;
+        height: 41px;
+        border: none;
+        border-radius: 35px;
+        background-color: rgba(255, 255, 255, 0.42);
+        backdrop-filter: blur(25px);
+        padding-left: 20px;
+    }
+    &-subscribe__submit {
+        position: absolute;
+        right: 0;
+        width: 69px;
+        height: 41px;
+        background-color: #F37A1F;
+        border: none;
+        border-radius: 35px;
+    }
+    &-subscribe__input::placeholder {
+        color: #fff;
+        font-size: 17px;
+        line-height: 27px;
+    }
+    &-subscribe__link {
+        background-color: rgba(255, 255, 255, 0.42);
+        backdrop-filter: blur(25px);
+        width: 31px;
+        height: 31px;
+        border-radius: 0;
+        border: 2px solid #fff;
+        transition: .5s;
+        padding: 0;
+        margin-left: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-subscribe__link:hover {
+        background-color: #F37A1F;
+    }
+    &-subscribe__link.fb svg {
+        width: 8px;
+    }
+    &-subscribe__link.vk svg {
+        width: 18px;
+    }
+    &-subscribe__link.inst svg {
+        width: 15px;
+    }
+    &-subscribe__link.yb svg {
+        width: 18px;
+    }
+    &-subscribe__socials{
+        display: flex;
+    }
+} 
+
+
+.footer {
+    padding: 58px 0 20px 0;
+    height: 345px;
+    background-color: #000;
+    color: #fff;
+    &-title {
+        font-size: 22px;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list {
+        margin-top: 29px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        cursor: pointer;
+        font-size: 17px;
+        line-height: 27px;
+    }
+    &__link:hover {
+        text-decoration: underline;
+    }
+    &__list-right {
+        margin-left: 64px;
+    }
+    &__menu-list {
+        margin-top: 28px;
+    }
+
+    &__contacts {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__contacts-tel {
+        font-size: 22px;
+        line-height: 30px;
+        color:#F37A1F;
+        font-family:'STIHLCONTRAFACEDISPLAYTITLING';
+    }
+    &__contacts-tel:hover {
+        text-decoration-color: #F37A1F;
+        text-decoration: underline;
+    }
+    &__contact-btn {
+        border: 1px solid #fff;
+        color: #fff;
+        transition: 0.6s;
+    }
+    &__contact-btn:hover {
+        background-color: #F37A1F;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    &__logo-img {
+        width: 159px;
+        height: 70px;
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__logo-descr {
+        font-size: 14px;
+        line-height: 12px;
+    }
+    &__line {
+        width: 31px;
+        height: 4px;
+    }
+}
+
+
